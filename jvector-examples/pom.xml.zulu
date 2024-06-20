@@ -13,6 +13,7 @@
     <name>JVector Examples</name>
     <properties>
         <awssdk.version>2.21.10</awssdk.version>
+        <warmupIterations>0</warmupIterations>
     </properties>
     <build>
         <plugins>
@@ -118,6 +119,7 @@
                                         <argument>-Xmx64G</argument>
                                         <argument>-ea</argument>
                                         <argument>-Xlog:gc*:file=gc-bench.log</argument>
+                                        <argument>-DwarmupIterations=${warmupIterations}</argument>
                                         <argument>io.github.jbellis.jvector.example.Bench</argument>
                                         <argument>${benchArgs}</argument>
                                     </arguments>
